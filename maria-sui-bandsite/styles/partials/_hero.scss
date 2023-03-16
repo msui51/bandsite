@@ -1,20 +1,20 @@
 @use './variables';
 
-// .hero {
-//     background-image: url("../../assets/Images/hero-bio.jpg");
-//     display: block;
-//     width:100vw;
-//     height: 50vh;
-//     background-position: center;
-//     background-size: cover;
-//     background-color: #323232;
-//     opacity: 50%;
-//     display: flex;
-//     align-items: center;
-//     ;
+.hero {
+    background-image: url("../../assets/Images/hero-bio.jpg");
+    display: block;
+    width:100vw;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-color: #323232;
+    opacity: 50%;
+    display: flex;
+    align-items: center;
+    ;
 
-//     &__title {
-//         color:variables.$primary-color-light;
+    &__title {
+        color:variables.$primary-color-light;
     
-//     }
-// }
+    }
+}

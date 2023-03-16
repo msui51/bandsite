@@ -25,6 +25,22 @@
   font-weight: bold;
 }
 
+.hero {
+  background-image: url("../../assets/Images/hero-bio.jpg");
+  display: block;
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-color: #323232;
+  opacity: 50%;
+  display: flex;
+  align-items: center;
+}
+.hero__title {
+  color: #ffffff;
+}
+
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
