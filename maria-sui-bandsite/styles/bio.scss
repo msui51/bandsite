@@ -6,3 +6,8 @@
 @use './partials/variables';
 @use './partials/mixins';
 @use './partials/fonts';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}

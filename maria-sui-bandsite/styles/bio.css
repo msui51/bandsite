@@ -1,3 +1,30 @@
+.header {
+  background-color: #323232;
+  width: 100%;
+  padding: 1rem;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  height: 1.25rem;
+  width: 7.5rem;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+.header__nav-item {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+.header__nav-item--active {
+  font-weight: bold;
+}
+
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
@@ -18,4 +45,8 @@
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
 }/*# sourceMappingURL=bio.css.map */

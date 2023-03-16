@@ -1,0 +1,32 @@
+@use './variables';
+
+.header {
+    background-color: variables.$primary-color-dark;
+    width: 100%;
+    padding: 1rem;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__logo {
+        height:1.25rem;
+        width:7.5rem;
+    }
+    
+    &__nav{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
+    }
+    &__nav-item{
+        text-decoration: none;
+        color: variables.$primary-color-light;
+        font-size:0.875rem;
+    }
+    &__nav-item--active {
+        font-weight:bold;
+        
+    }
+}
