@@ -61,9 +61,23 @@
   padding-bottom: 1rem;
 }
 .main__img-text {
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.5rem;
+  padding-bottom: 1.5rem;
 }
+.main__subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.main__box {
+  padding-bottom: 1rem;
+}
+.main__text {
+  font-size: 0.813rem;
+  line-height: 1.3rem;
+}
+
 .carousel {
   background-color: #fafafa;
 }

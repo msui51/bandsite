@@ -10,10 +10,22 @@
         padding-bottom: 1rem;
     }
     &__img-text{
-        font-weight: bold;
+        font-weight: 700;
         line-height: 1.5rem;
+        padding-bottom: 1.5rem;
 
     }
-    &__subtitle{}
-    &__text{}
+    &__subtitle{
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+    }
+    &__box{
+        padding-bottom: 1rem;
+    }
+    &__text{
+        font-size: 0.813rem;
+        line-height: 1.3rem;
+    }
+
 }
