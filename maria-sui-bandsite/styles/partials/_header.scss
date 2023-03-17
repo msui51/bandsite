@@ -5,23 +5,16 @@
     background-color: variables.$primary-color-dark;
     width: 100%;
     padding: 1rem;
+   
 
     &__wrapper {
         display: flex;
         justify-content: center;
-        
-        // @include tablet {
-        //     flex-direction: row;
-        //     color:white;
-        // }
     }
     
     &__logo {
         height:1.25rem;
         width:7.5rem;
-        @include tablet {
-            height:3rem;
-        }
     }
     
     &__nav-list{
