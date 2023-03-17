@@ -101,13 +101,15 @@
   color: #ffffff;
   padding: 1.5rem 0 1rem 1rem;
 }
+.footer__wrapper {
+  width: 46%;
+}
 .footer__title {
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 .footer__icons {
   display: flex;
-  width: 45%;
   justify-content: space-between;
   padding-bottom: 1.75rem;
 }

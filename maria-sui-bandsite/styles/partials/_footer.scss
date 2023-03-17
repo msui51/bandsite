@@ -4,14 +4,16 @@
     background-color: variables.$primary-color-dark;
     color: variables.$primary-color-light;
     padding: 1.5rem 0 1rem 1rem;
-    &__wrapper {}
+    &__wrapper {
+        width: 46%;
+    }
     &__title {
         font-size: 1.5rem;
         padding-bottom: 1rem;
     }
     &__icons {
         display: flex;
-        width: 45%;
+        // width: 45%;
         justify-content: space-between;
         padding-bottom: 1.75rem;
     }
