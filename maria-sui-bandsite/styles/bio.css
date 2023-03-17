@@ -63,12 +63,13 @@
 .main__img-text {
   font-weight: 700;
   line-height: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 .main__subtitle {
   font-size: 0.875rem;
   font-weight: 600;
   padding-bottom: 1rem;
+  padding-top: 0.5rem;
 }
 .main__box {
   padding-bottom: 1rem;
