@@ -46,8 +46,21 @@
 .main__img {
   width: 100%;
 }
+.carousel {
+  background-color: #fafafa;
+}
+.carousel__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+.carousel__imgs {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .carousel__img {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 @font-face {

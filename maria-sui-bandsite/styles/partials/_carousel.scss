@@ -1,8 +1,19 @@
-.carousel {
+@use './variables';
 
-    &__title{}
-    &__imgs{}
+.carousel {
+    background-color: variables.$secondary-color-background;
+    
+    &__title{
+        padding-top:1.5rem;
+        padding-bottom:1rem;
+        padding-left:1rem;
+    }
+    &__imgs{
+        padding-left:1rem;
+        padding-right:1rem;
+    }
     &__img {
         width:100%;
+        padding-bottom:1rem;
     }
 }
