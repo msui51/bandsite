@@ -26,39 +26,44 @@
 }
 
 .hero {
-  background-image: url("../../assets/Images/hero-bio.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/Images/hero-bio.jpg");
   display: block;
   width: 100vw;
   height: 50vh;
   background-position: center;
   background-size: cover;
-  background-color: #323232;
-  opacity: 50%;
   display: flex;
   align-items: center;
 }
 .hero__title {
   color: #ffffff;
+  padding-left: 1rem;
 }
 
+.main {
+  padding: 1.5rem 1rem 1rem;
+}
+.main__img {
+  width: 100%;
+}
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff");
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
