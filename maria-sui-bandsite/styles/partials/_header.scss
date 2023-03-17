@@ -9,11 +9,19 @@
     &__wrapper {
         display: flex;
         justify-content: center;
+        
+        // @include tablet {
+        //     flex-direction: row;
+        //     color:white;
+        // }
     }
     
     &__logo {
         height:1.25rem;
         width:7.5rem;
+        @include tablet {
+            height:3rem;
+        }
     }
     
     &__nav-list{
