@@ -13,7 +13,30 @@
         display: flex;
         width: 45%;
         justify-content: space-between;
-        padding-bottom: 1rem;
+        padding-bottom: 1.75rem;
+    }
+    &__icon {}
+    &__contact {
+        padding-bottom: 2rem;
+        line-height: 1.125rem;
+    }
+    &__contact-text {
+        padding-bottom: 1.5rem;
+    }
+    &__contact-text--bold {
+        font-weight: 700;
+    }
+    &__link {
+        text-decoration: none;
+        color: variables.$primary-color-light
+    }
+    &__copyright {
+        padding-top:2.5rem;
+    }
+    &__logo {}
+    &__copyright-text {
+        display: block;
+        padding-top: 1rem;
     }
         
     

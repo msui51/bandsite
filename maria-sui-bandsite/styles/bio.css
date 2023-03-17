@@ -109,7 +109,28 @@
   display: flex;
   width: 45%;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding-bottom: 1.75rem;
+}
+.footer__contact {
+  padding-bottom: 2rem;
+  line-height: 1.125rem;
+}
+.footer__contact-text {
+  padding-bottom: 1.5rem;
+}
+.footer__contact-text--bold {
+  font-weight: 700;
+}
+.footer__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer__copyright {
+  padding-top: 2.5rem;
+}
+.footer__copyright-text {
+  display: block;
+  padding-top: 1rem;
 }
 
 @font-face {
