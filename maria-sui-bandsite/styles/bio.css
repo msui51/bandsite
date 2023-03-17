@@ -11,18 +11,26 @@
   height: 1.25rem;
   width: 7.5rem;
 }
-.header__nav {
+.header__nav-list {
   display: flex;
   justify-content: space-around;
   padding-top: 1rem;
+  padding-left: 0;
 }
 .header__nav-item {
+  list-style-type: none;
+}
+.header__nav-link {
   text-decoration: none;
   color: #ffffff;
-  font-size: 0.875rem;
 }
-.header__nav-item--active {
+.header__nav-link--active {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 1rem;
   font-weight: bold;
+}
+.header__nav-link--inactive {
+  color: #e1e1e1;
 }
 
 .hero {
