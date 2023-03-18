@@ -57,7 +57,7 @@
 }
 @media (min-width: 768px) {
   .main {
-    padding-top: 3rem;
+    padding: 3rem 2.25rem 2.25rem;
   }
 }
 .main__title {
