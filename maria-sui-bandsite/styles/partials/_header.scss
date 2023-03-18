@@ -5,55 +5,35 @@
     background-color: variables.$primary-color-dark;
     width: 100%;
     padding: 1rem;
-   
-
     &__wrapper {
         display: flex;
         justify-content: center;
     }
-    
+
     &__logo {
         height:1.25rem;
         width:7.5rem;
     }
-    
+
     &__nav-list{
         display: flex;
         justify-content: space-around;
         padding-top: 1rem;
         padding-left: 0;
     }
-
     &__nav-item{
         list-style-type: none;
     }
-
     &__nav-link{
         text-decoration: none;
         color: variables.$primary-color-light;
     }
-
     &__nav-link--active{
         border-bottom: 3px solid variables.$primary-color-light;
         padding-bottom: 1rem;
         font-weight: bold;
     }
-
-    &__nav-link--inactive{
-        color:variables.$secondary-color-divider;
-    }
-    // &__nav{
-    //     display: flex;
-    //     justify-content: space-around;
-    //     padding-top: 1rem;
-    // }
-    // &__nav-item{
-    //     text-decoration: none;
-    //     color: variables.$primary-color-light;
-    //     font-size:0.875rem;
-    // }
-    // &__nav-item--active {
-    //     font-weight:bold;
-        
-    // }
 }
+
+
+
