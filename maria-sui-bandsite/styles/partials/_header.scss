@@ -5,6 +5,11 @@
     background-color: variables.$primary-color-dark;
     width: 100%;
     padding: 1rem;
+    @media (min-width: variables.$tablet-breakpoint){
+        display:flex;
+        flex-direction: row;
+        // i'm stuck
+    }
     &__wrapper {
         display: flex;
         justify-content: center;
