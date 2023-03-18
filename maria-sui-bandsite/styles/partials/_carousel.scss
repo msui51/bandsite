@@ -2,18 +2,34 @@
 
 .carousel {
     background-color: variables.$secondary-color-background;
+    @media (min-width: variables.$tablet-breakpoint){
+        padding: 3rem 2.25rem 2.25rem;
+    }
     
     &__title{
         padding-top:1.5rem;
         padding-bottom:1rem;
         padding-left:1rem;
+        @media (min-width: variables.$tablet-breakpoint){
+            padding-bottom: 2.25rem;
+            font-size: 2.25rem;
+        }
     }
     &__imgs{
         padding-left:1rem;
         padding-right:1rem;
+        @media (min-width: variables.$tablet-breakpoint){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 0;
+        }
     }
     &__img {
         width:100%;
         padding-bottom:1rem;
+        @media (min-width: variables.$tablet-breakpoint){
+            width:30%;
+        }
     }
 }
