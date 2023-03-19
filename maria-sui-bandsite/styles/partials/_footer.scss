@@ -17,29 +17,33 @@
     // wraps the title and icons
 
     &__title-wrapper {
-        width: 46%;
+        width: 60%;
         @media (min-width: variables.$tablet-breakpoint){
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
             padding-top:1rem;
             padding-bottom: 1.5rem;
         }
         @media (min-width:variables.$desktop-breakpoint){
-            width:45%
+            width:50%;
         }
     }
+
     &__title {
         font-size: 1.5rem;
         padding-bottom: 1rem;
-        @media (min-width:variables.$desktop-breakpoint){
-            font-size: 2.25rem;
+        @media (min-width:variables.$tablet-breakpoint){
+            font-size: 2rem;
         }
     }
+
     &__icons {
         display: flex;
         justify-content: space-between;
         padding-bottom: 1rem;
         padding-bottom: 1.75rem;
+        width:75%;
         @media (min-width:variables.$tablet-breakpoint){
             width: 45%;
         }
@@ -62,18 +66,23 @@
     &__contact {
         padding-bottom: 2rem;
         line-height: 1.125rem;
+        &:last-of-type {
+            padding-bottom: 4.5rem;
+        }
         @media (min-width:variables.$tablet-breakpoint){
             font-size: 0.875rem;
         }
     }
+
     &__contact-text {
         padding-bottom: 1.5rem;
     }
+
     &__contact-text--bold {
         font-weight: 700;
     }
 
-    // for contact email links
+    //contact email links
 
     &__link {
         text-decoration: none;
@@ -90,6 +99,7 @@
             right:7rem;
         }
     }
+
     &__copyright {
         display: block;
         padding-top: 1rem;

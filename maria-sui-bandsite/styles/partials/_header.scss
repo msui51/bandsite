@@ -30,13 +30,21 @@
         }
     }
 
+    // wraps the <ul>
+
+    &__nav {
+        width:100%;
+        @media (min-width: variables.$tablet-breakpoint){
+            width:25%;
+        }
+    }
+
     //wraps the <li>s 
 
     &__nav-list{
         display: flex;
         padding-top: 1rem;
         padding-left: 0;
-        width:100%;
         @media (min-width:variables.$tablet-breakpoint){
            padding-top: 0;
            padding-left: 2.5rem;
@@ -44,6 +52,8 @@
            justify-content: space-between;
         }
     }
+
+    // these are individual <li>
 
     &__nav-item{
         display: flex;
@@ -64,11 +74,20 @@
 
     &__nav-item--inactive{
         width:50%;
+         &:hover {
+            color: variables.$primary-color-light;
+            border-bottom: 3px solid variables.$primary-color-light;
+        }
     }
-    
+
     &__nav-link{
         text-decoration: none;
         color: variables.$primary-color-light;
+
+    }
+
+    &__nav-link--inactive {
+        color:variables.$secondary-color-divider;
     }
 }
 
