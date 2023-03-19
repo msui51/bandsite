@@ -12,6 +12,8 @@
         padding:1.5rem 0 0;
     }
 
+    // wraps the logo
+
     &__wrapper {
         display: flex;
         justify-content: center;
@@ -27,6 +29,8 @@
             padding-left: 5rem;
         }
     }
+
+    //wraps the <li>s 
 
     &__nav-list{
         display: flex;

@@ -20,6 +20,8 @@
         }
     }
 
+    // wraps all of the images
+
     &__imgs{
         padding-left:1rem;
         padding-right:1rem;
@@ -30,6 +32,8 @@
             padding: 0;
         }
     }
+    
+    // individual images
     
     &__img {
         width:100%;
