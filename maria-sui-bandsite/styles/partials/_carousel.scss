@@ -1,9 +1,13 @@
 @use './variables';
 
+
 .carousel {
     background-color: variables.$secondary-color-background;
     @media (min-width: variables.$tablet-breakpoint){
         padding: 3rem 2.25rem 2.25rem;
+    }
+    @media (min-width:variables.$desktop-breakpoint){
+        padding: 3rem 5rem 2.25rem;
     }
     
     &__title{
@@ -15,6 +19,7 @@
             font-size: 2.25rem;
         }
     }
+
     &__imgs{
         padding-left:1rem;
         padding-right:1rem;
@@ -25,6 +30,7 @@
             padding: 0;
         }
     }
+    
     &__img {
         width:100%;
         padding-bottom:1rem;

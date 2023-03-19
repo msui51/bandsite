@@ -1,15 +1,17 @@
 @use './variables';
 @use './mixins';
 
+
 .header {
     background-color: variables.$primary-color-dark;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0 0 0;
     @media (min-width: variables.$tablet-breakpoint){
         display:flex;
         flex-direction: row;
-        // i'm stuck
+        padding:1.5rem 0 0;
     }
+
     &__wrapper {
         display: flex;
         justify-content: center;
@@ -18,25 +20,51 @@
     &__logo {
         height:1.25rem;
         width:7.5rem;
+        @media (min-width:variables.$tablet-breakpoint){
+            padding-left: 2.25rem;
+        }
+        @media (min-width:variables.$desktop-breakpoint){
+            padding-left: 5rem;
+        }
     }
 
     &__nav-list{
         display: flex;
-        justify-content: space-around;
         padding-top: 1rem;
         padding-left: 0;
+        width:100%;
+        @media (min-width:variables.$tablet-breakpoint){
+           padding-top: 0;
+           padding-left: 2.5rem;
+           display: flex;
+           justify-content: space-between;
+        }
     }
+
     &__nav-item{
+        display: flex;
+        justify-content: space-around;
         list-style-type: none;
+        width:50%;
+        @media (min-width:variables.$tablet-breakpoint){
+            font-size: 0.875rem;
+        }
     }
+
+    &__nav-item--active{
+        font-weight: 700;
+        width:50%;
+        border-bottom: 3px solid variables.$primary-color-light;
+        padding-bottom: 1rem;
+    }
+
+    &__nav-item--inactive{
+        width:50%;
+    }
+    
     &__nav-link{
         text-decoration: none;
         color: variables.$primary-color-light;
-    }
-    &__nav-link--active{
-        border-bottom: 3px solid variables.$primary-color-light;
-        padding-bottom: 1rem;
-        font-weight: bold;
     }
 }
 

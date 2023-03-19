@@ -1,9 +1,14 @@
 @use './variables';
+@use './mixins';
+
 
 .main {
     padding: 1.5rem 1rem 1rem;
     @media (min-width: variables.$tablet-breakpoint){
         padding: 3rem 2.25rem 2.25rem;
+    }
+    @media (min-width:variables.$desktop-breakpoint){
+        padding: 3.5rem 5rem; 
     }
 
     &__title{
@@ -13,6 +18,11 @@
             font-size: 2.25rem;
             padding-bottom: 2.25rem;
         }
+        //mixins isn't working for me
+        // @include tablet {
+        //     font-size: 2.25rem;
+        // }
+
     }
     
     &__img {
@@ -20,8 +30,21 @@
         padding-bottom: 1rem;
         @media (min-width: variables.$tablet-breakpoint){
             padding: 0 2.25rem 2.25rem 2.25rem;
+            width:90%;
+        }
+        @media (min-width:variables.$desktop-breakpoint){
+            width:60vw;
+            height:85vh;
         }
     }
+
+    &__img-wrapper{
+        @media (min-width:variables.$desktop-breakpoint){
+            display: flex;
+            justify-content: center;
+        }
+    }
+
     &__img-text{
         font-weight: 700;
         line-height: 1.5rem;
@@ -31,8 +54,19 @@
             font-size: 1.5rem;
             line-height: 2rem;
         }
-
+        @media (min-width:variables.$desktop-breakpoint){
+            padding: 0 2.25rem 2.25rem 10.5rem;
+            width:65%;
+        }
     }
+
+    &__wrapper{
+        @media (min-width:variables.$desktop-breakpoint){
+            padding-left:8.25rem;
+            padding-right:8.25rem;
+        }
+    }
+
     &__subtitle{
         font-size: 0.875rem;
         font-weight: 600;
@@ -43,14 +77,17 @@
             font-size: 1.5rem;
         }
     }
-    &__wrapper{
+
+    &__text-wrapper{
         @media (min-width: variables.$tablet-breakpoint){
             display: flex;
         }
     }
-    &__box{
+
+    &__text-box{
         padding-bottom: 1rem;
     }
+
     &__text{
         font-size: 0.813rem;
         line-height: 1.3rem;
@@ -61,5 +98,4 @@
             line-height: 1.5rem;
         }
     }
-
 }

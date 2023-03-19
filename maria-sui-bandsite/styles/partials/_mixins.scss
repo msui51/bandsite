@@ -1,11 +1,15 @@
 @use './variables';
 
 @mixin tablet {
-    @media (min-width: $tablet-breakpoint){
+    @media (min-width: variables.$tablet-breakpoint){
         @content;
     }
 }
 
+ // @media (min-width: variables.$tablet-breakpoint){
+        //     font-size: 2.25rem;
+        //     padding-bottom: 2.25rem;
+        // }
 @mixin desktop {
     @media (min-width:$desktop-breakpoint){
         @content;
