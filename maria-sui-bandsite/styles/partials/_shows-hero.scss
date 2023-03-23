@@ -1,0 +1,53 @@
+@use './variables'; 
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url("../../assets/images/hero-shows.jpg");
+    // display: block;
+    width:100%;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:2rem 0 1rem 1rem;
+    overflow: auto;
+    @media (min-width: variables.$tablet-breakpoint){
+        height: 90vh;
+    }
+    @media (min-width:variables.$desktop-breakpoint){
+        height:100vh;    
+    }
+    &__wrapper{
+        display:flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    &__subtitle {
+        color:variables.$primary-color-light;
+        @media (min-width:variables.$tablet-breakpoint){
+            padding-left: 2.25rem;
+            font-size:1.5rem;
+            font-weight: 700;
+        }
+    }
+    &__title {
+        color:variables.$primary-color-light;
+        @media (min-width: variables.$tablet-breakpoint){
+            font-size: 3.75rem;
+            padding-left: 2.25rem;
+            width: 80%;
+        }
+        @media (min-width:variables.$desktop-breakpoint){
+            padding-left: 5rem;
+        }
+    }
+
+    &__song {
+        @media (min-width: variables.$tablet-breakpoint){
+            padding-left: 2.25rem;
+            width:60%;
+        }
+    }
+}

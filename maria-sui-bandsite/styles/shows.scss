@@ -3,9 +3,11 @@
 @use './partials/variables';
 @use './partials/mixins';
 @use './partials/fonts';
+@use './partials/shows-hero';
 
 * {
     margin:0;
+    box-sizing: border-box;
 }
 body {
     font-family: 'AvenirNext LT Pro';
