@@ -1,0 +1,40 @@
+@use './variables';
+
+.comments {
+    padding-left: 1rem;
+    &__title{
+
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img{
+        height:2.25rem;
+        width:2.25rem;
+        border-radius: 50%;
+        max-width:100%;
+    }
+
+    &__wrapper-input{
+        width:85%;
+    }
+
+    &__input-title{
+        color:variables.$primary-color-inactiveCTA;
+    }
+    &__input-textarea {
+        resize:none;
+        width:85%;
+        padding:0.5rem;
+    }
+
+    &__button{
+        display: block;
+        width:90%;
+        background-color: variables.$primary-color-dark;
+        color: variables.$primary-color-light;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}

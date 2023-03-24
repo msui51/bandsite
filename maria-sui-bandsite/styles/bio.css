@@ -155,6 +155,11 @@
     padding-bottom: 2.25rem;
   }
 }
+@media (min-width: 768px) {
+  .main__title {
+    font-size: 2.25rem;
+  }
+}
 @media (min-width: 1280px) {
   .main__img-wrapper {
     display: flex;
@@ -413,6 +418,39 @@
   font-style: normal;
   font-display: swap;
 }
+.comments {
+  padding-left: 1rem;
+}
+.comments__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.comments__img {
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  max-width: 100%;
+}
+.comments__wrapper-input {
+  width: 85%;
+}
+.comments__input-title {
+  color: #afafaf;
+}
+.comments__input-textarea {
+  resize: none;
+  width: 85%;
+  padding: 0.5rem;
+}
+.comments__button {
+  display: block;
+  width: 90%;
+  background-color: #323232;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 * {
   margin: 0;
 }

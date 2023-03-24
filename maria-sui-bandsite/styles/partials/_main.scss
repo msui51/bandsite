@@ -19,9 +19,9 @@
             padding-bottom: 2.25rem;
         }
         //mixins isn't working for me
-        // @include tablet {
-        //     font-size: 2.25rem;
-        // }
+        @include mixins.tablet {
+            font-size: 2.25rem;
+        }
 
     }
     
