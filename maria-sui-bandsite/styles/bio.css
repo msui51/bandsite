@@ -431,11 +431,17 @@
 }
 .comments__input-title {
   color: #afafaf;
+  padding-bottom: 0.25rem;
 }
 .comments__input-textarea {
   resize: none;
   width: 85%;
-  padding: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #afafaf;
+}
+.comments__input-textarea--small {
+  height: 2.25rem;
 }
 .comments__button {
   display: block;
