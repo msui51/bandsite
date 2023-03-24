@@ -2,16 +2,33 @@
 @use './mixins';
 
 .main {
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 0 1rem;
+    @include mixins.tablet{
+        padding:2rem 0.75rem 2.25rem;
+    }
 
-    &__title{}
+    &__title{
+        padding-left: 1rem;
+        @include mixins.tablet{
+            padding:0 0 1rem 0.75rem;
+        }
+    }
     &__box{
         border-bottom: 1px solid variables.$primary-color-inactiveCTA;
-        padding:1rem 0 1rem 0;
+        // padding:1rem 1rem 1rem 0;
+        padding:1rem 1rem 1rem 1rem;
         height: 15.625rem;
+        // width:100%;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
+        @include mixins.tablet {
+            flex-direction: row;
+            align-items:last baseline;
+            padding:1.5rem 0.889rem;
+            height:100px;
+        
+        }
     }
     &__list{
         list-style-type: none;
@@ -20,17 +37,35 @@
         flex-direction: column;
         justify-content: space-between;
         height: 12.5rem;
-        
+        @include mixins.tablet{
+            flex-direction: row;
+            width:70%;
+            height:auto;
+        }
     }
     &__item{
         display:flex;
         flex-direction: column;
         row-gap: 5px;
+        @include mixins.tablet{
+            row-gap: 0;
+        }
         
     }
     &__item-title{
         color: variables.$primary-color-inactiveCTA;
-        
+    }
+
+    &__item-title--visible{
+        @include mixins.tablet{
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__item-title--disappear{
+        @include mixins.tablet{
+            font-size: 0;
+        }
     }
     &__item-detail{
         
@@ -42,5 +77,9 @@
 
     &__cta-button{
         @include mixins.cta;
+        @include mixins.tablet{
+            width:9.375rem;
+        }
     }
+        
 }
