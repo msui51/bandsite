@@ -1,0 +1,46 @@
+@use './variables';
+@use './mixins';
+
+.main {
+    padding: 2rem 1rem 1rem 1rem;
+
+    &__title{}
+    &__box{
+        border-bottom: 1px solid variables.$primary-color-inactiveCTA;
+        padding:1rem 0 1rem 0;
+        height: 15.625rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__list{
+        list-style-type: none;
+        padding:0 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 12.5rem;
+        
+    }
+    &__item{
+        display:flex;
+        flex-direction: column;
+        row-gap: 5px;
+        
+    }
+    &__item-title{
+        color: variables.$primary-color-inactiveCTA;
+        
+    }
+    &__item-detail{
+        
+
+    }
+    &__item-detail--bold{
+        font-weight: 700;
+    }
+
+    &__cta-button{
+        @include mixins.cta;
+    }
+}
