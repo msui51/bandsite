@@ -6,11 +6,12 @@
     background-color: variables.$primary-color-dark;
     width: 100%;
     padding: 1rem 0 0 0;
-    @media (min-width: variables.$tablet-breakpoint){
+    @include mixins.tablet {
         display:flex;
         flex-direction: row;
         padding:1.5rem 0 0;
     }
+
 
     // wraps the logo
 
@@ -22,10 +23,10 @@
     &__logo {
         height:1.25rem;
         width:7.5rem;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet {
             padding-left: 2.25rem;
         }
-        @media (min-width:variables.$desktop-breakpoint){
+        @include mixins.desktop {
             padding-left: 5rem;
         }
     }
@@ -45,7 +46,7 @@
         display: flex;
         padding-top: 1rem;
         padding-left: 0;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
            padding-top: 0;
            padding-left: 2.5rem;
            display: flex;
@@ -60,7 +61,7 @@
         justify-content: space-around;
         list-style-type: none;
         width:50%;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             font-size: 0.875rem;
             // justify-content: space-between;
         }
@@ -71,7 +72,7 @@
         width:50%;
         border-bottom: 3px solid variables.$primary-color-light;
         padding-bottom: 1rem;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             width:auto;
         }
     }
@@ -82,7 +83,7 @@
             color: variables.$primary-color-light;
             border-bottom: 3px solid variables.$primary-color-light;
         }
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             width: auto;
             &:hover {
                 color: variables.$primary-color-light;

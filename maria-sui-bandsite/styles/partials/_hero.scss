@@ -1,4 +1,5 @@
 @use './variables';
+@use './mixins';
 
 
 .hero {
@@ -11,10 +12,10 @@
     background-size: cover;
     display: flex;
     align-items: center;
-    @media (min-width: variables.$tablet-breakpoint){
+    @include mixins.tablet{
         height: 90vh;
     }
-    @media (min-width:variables.$desktop-breakpoint){
+    @include mixins.desktop{
         height:100vh;    
     }
 
@@ -22,11 +23,11 @@
         color:variables.$primary-color-light;
         padding-left: 1rem;
         font-size: 1.5rem;
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             font-size: 3.75rem;
             padding-left: 2.25rem;
         }
-        @media (min-width:variables.$desktop-breakpoint){
+        @include mixins.desktop{
             padding-left: 5rem;
         }
     }
