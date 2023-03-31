@@ -21,8 +21,8 @@
     }
 
     &__logo {
-        height:1.25rem;
-        width:7.5rem;
+        // height:1.25rem;
+        // width:7.5rem;
         @include mixins.tablet {
             padding-left: 2.25rem;
         }
