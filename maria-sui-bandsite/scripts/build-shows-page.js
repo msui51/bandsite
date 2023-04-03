@@ -97,8 +97,10 @@ let showsArr = [
         ul.appendChild(li);
     }
 
-   
- 
+//    const li=document.getElementsByClassName("main__item");
+//    li.addEventListener("click",function () {
+//            li.style.backgroundColor = "black";
+//     });
 
        
 
