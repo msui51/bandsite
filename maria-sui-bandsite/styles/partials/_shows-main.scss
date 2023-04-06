@@ -79,10 +79,10 @@
              background-color: variables.$secondary-color-background;
              cursor:pointer;   
             }
-    
-            
-        }
-        
+        }      
+    }
+    &__item--active{
+        background-color: variables.$secondary-color-divider;
     }
     &__item-title{
         color:variables.$primary-color-inactiveCTA;
@@ -110,6 +110,9 @@
         @include mixins.cta;
         @include mixins.tablet{
             width:9.375rem;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
         

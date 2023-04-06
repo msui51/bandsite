@@ -326,6 +326,9 @@
     cursor: pointer;
   }
 }
+.main__item--active {
+  background-color: #e1e1e1;
+}
 .main__item-title {
   color: #afafaf;
 }
@@ -352,6 +355,9 @@
 @media (min-width: 768px) {
   .main__cta-button {
     width: 9.375rem;
+  }
+  .main__cta-button:hover {
+    cursor: pointer;
   }
 }
 

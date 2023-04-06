@@ -22,12 +22,78 @@ commentHeader.classList.add("comments__title");
 commentHeader.innerText="Join the Conversation";
 commentSection.appendChild(commentHeader);
 
-for (let i=0; i<commentsArr.length; i++){
+
+
+const divWrapper=document.createElement("div");
+divWrapper.classList.add("comments__wrapper");
+const divImg= document.createElement("div");
+const divComment=document.createElement("div");
+divImg.classList.add("comments__wrapper--left");
+img=document.createElement("img");
+img.classList.add("comments__img");
+img.src="../assets/images/Mohan-muruge.jpg";
+divImg.appendChild(img);
+divComment.classList.add("comments__wrapper--right");
+commentSection.appendChild(divWrapper);
+divWrapper.appendChild(divImg);
+divWrapper.appendChild(divComment);
+const divText=document.createElement("div");
+form=document.createElement("form");
+divText.appendChild(form);
+divComment.appendChild(divText);
+nameLabel=document.createElement("h3");
+// nameLabel=document.createElement("label");
+// nameLabel.setAttribute("for","name");
+nameLabel.innerText="NAME";
+form.appendChild(nameLabel);
+
+
+input=document.createElement("input");
+input.setAttribute("type","text");
+input.setAttribute("name","name");
+input.setAttribute("placeholder","Enter your name");
+input.classList.add("comments__input-name");
+form.appendChild(input);
+
+commentLabel=document.createElement("h3");
+
+// commentLabel=document.createElement("label");
+// commentLabel.setAttribute("for","comment");
+commentLabel.innerText="COMMENT";
+form.appendChild(commentLabel);
+
+textarea=document.createElement("textarea");
+textarea.setAttribute("name","comment");
+textarea.setAttribute("placeholder","Add a new comment");
+textarea.classList.add("comments__input-comment");
+form.appendChild(textarea);
+submitInput=document.createElement("input");
+submitInput.setAttribute("type", "submit");
+submitInput.setAttribute("value", "COMMENT");
+submitInput.classList.add("comments__button");
+form.appendChild(submitInput);
+
+form.addEventListener("submit", function (e){
+    e.preventDefault();
+    const nameVal=e.target.name.value;
+    const commentVal=e.target.comment.value;
+    commentsArr.push({
+        name: nameVal,
+        text: commentVal,
+    });
+    
+    e.target.reset();
+});
+
+
+
+   
+    for (let i=0; i<commentsArr.length; i++){
     const divWrapper=document.createElement("div");
     divWrapper.classList.add("comments__wrapper");
     const divImg= document.createElement("div");
     const divComment=document.createElement("div");
-    divImg.classList.add("comments__wrapper--left");
+    divImg.classList.add("comments__wrapper--left-no-img");
     divComment.classList.add("comments__wrapper--right");
     commentSection.appendChild(divWrapper);
     divWrapper.appendChild(divImg);
@@ -50,4 +116,6 @@ for (let i=0; i<commentsArr.length; i++){
     content.innerText=commentsArr[i].text;
     divText.appendChild(content);
        
-}
+};
+
+

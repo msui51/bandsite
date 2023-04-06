@@ -40,7 +40,7 @@ let showsArr = [
         venue:"Press Club",
         location:"San Francisco, CA"
     }
-]
+];
     const ul = document.createElement("ul");
     ul.classList.add("main__list");
     main.appendChild(ul);
@@ -97,10 +97,14 @@ let showsArr = [
         ul.appendChild(li);
     }
 
-//    const li=document.getElementsByClassName("main__item");
-//    li.addEventListener("click",function () {
-//            li.style.backgroundColor = "black";
-//     });
+    const li=document.querySelectorAll(".main__item");
+    li.forEach(element => {
+        element.addEventListener("click", ()=>{
+            document.querySelector(".main__item--active")?.classList.remove("main__item--active");
+            element.classList.add("main__item--active");
+        });
+    });
+
 
        
 
