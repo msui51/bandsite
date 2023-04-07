@@ -17,27 +17,13 @@ let commentsArr =[
 ]
 
 
-
-form.addEventListener("submit", function (e){
-    e.preventDefault();
-    const nameVal=e.target.name.value;
-    const commentVal=e.target.comment.value;
-    commentsArr.unshift({
-        name: nameVal,
-        text: commentVal,
-    });
-    displayComments();
-    e.target.reset();
-});
+const parentWrapper=document.createElement("div");
+const comments=document.querySelector(".comments");
+comments.appendChild(parentWrapper);
 
 
-
-
-
-
-
-    
-    
+function displayComments(){    
+    parentWrapper.innerText='';
     for (let i=0; i<commentsArr.length; i++){
        
         const divWrapper=document.createElement("div");
@@ -46,7 +32,7 @@ form.addEventListener("submit", function (e){
         const divComment=document.createElement("div");
         divImg.classList.add("comments__wrapper--left-no-img");
         divComment.classList.add("comments__wrapper--right");
-        commentSection.appendChild(divWrapper);
+        parentWrapper.appendChild(divWrapper);
         divWrapper.appendChild(divImg);
         divWrapper.appendChild(divComment);
         const divNameDate=document.createElement("div");
@@ -68,7 +54,21 @@ form.addEventListener("submit", function (e){
         divText.appendChild(content);
     
     };
-    
+};  
+displayComments();  
 
+const form=document.querySelector("form");
+
+form.addEventListener("submit", function (e){
+    e.preventDefault();
+    const nameVal=e.target.name.value;
+    const commentVal=e.target.textarea.value;
+    commentsArr.unshift({
+        name: nameVal,
+        text: commentVal,
+    });
+    displayComments();
+    e.target.reset();
+});
 
 
