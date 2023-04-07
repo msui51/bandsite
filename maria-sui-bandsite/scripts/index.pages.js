@@ -26,32 +26,32 @@ function displayComments(){
     parentWrapper.innerText='';
     for (let i=0; i<commentsArr.length; i++){
        
-        const divWrapper=document.createElement("div");
-        divWrapper.classList.add("comments__wrapper");
-        const divImg= document.createElement("div");
-        const divComment=document.createElement("div");
-        divImg.classList.add("comments__wrapper--left-no-img");
-        divComment.classList.add("comments__wrapper--right");
-        parentWrapper.appendChild(divWrapper);
-        divWrapper.appendChild(divImg);
-        divWrapper.appendChild(divComment);
-        const divNameDate=document.createElement("div");
-        divNameDate.classList.add("comments__wrapper-name-date")
+        const childWrapper=document.createElement("div");
+        childWrapper.classList.add("comments__wrapper");
+        const img= document.createElement("div");
+        const content=document.createElement("div");
+        img.classList.add("comments__wrapper-no-img");
+        content.classList.add("comments__wrapper--right");
+        parentWrapper.appendChild(childWrapper);
+        childWrapper.appendChild(img);
+        childWrapper.appendChild(content);
+        const nameDate=document.createElement("div");
+        nameDate.classList.add("comments__wrapper-name-date")
         const divText=document.createElement("div");
-        divComment.appendChild(divNameDate);
-        divComment.appendChild(divText);
+        content.appendChild(nameDate);
+        content.appendChild(divText);
 
         const headerName=document.createElement("h3");
-        divNameDate.appendChild(headerName);
+        nameDate.appendChild(headerName);
         headerName.innerText=commentsArr[i].name;
 
         const date=document.createElement("p");
         date.innerText=commentsArr[i].date;
-        divNameDate.appendChild(date);
+        nameDate.appendChild(date);
 
-        const content=document.createElement("p");
-        content.innerText=commentsArr[i].text;
-        divText.appendChild(content);
+        const paragraph=document.createElement("p");
+        paragraph.innerText=commentsArr[i].text;
+        divText.appendChild(paragraph);
     
     };
 };  
@@ -63,10 +63,15 @@ form.addEventListener("submit", function (e){
     e.preventDefault();
     const nameVal=e.target.name.value;
     const commentVal=e.target.textarea.value;
-    commentsArr.unshift({
+    if (nameVal.length===0){
+        const nameInputForm=document.querySelector(".comments__input--name");
+        nameInputForm.style.border="1px solid #D22D2D";
+    }else{
+        commentsArr.unshift({
         name: nameVal,
         text: commentVal,
-    });
+        date: Date.now()
+    })};
     displayComments();
     e.target.reset();
 });

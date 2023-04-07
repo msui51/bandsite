@@ -6,7 +6,7 @@
     &__title{
 
     }
-    &__overall-wrapper{
+    &__form-wrapper{
         display: flex;
         border-bottom: 1px solid variables.$secondary-color-divider;
         padding:1rem 1rem 1rem 0;
@@ -41,6 +41,7 @@
     &__input--comment{
         padding-bottom: 4rem;
         margin-bottom: 1rem;
+        overflow: hidden;
     }
    
     &__button{
@@ -49,12 +50,25 @@
         @include mixins.cta;
     }
 
-    &__wrapper--left-no-img{
+    &__wrapper{
+        display: flex;
+    
+    }
+
+    &__wrapper-no-img{
         background-color: variables.$secondary-color-divider;
         width: 2.25rem;
         height:2.25rem;
         border-radius: 50%;
-    
+        padding-right:2.5rem;
+    }
+    &__wrapper{
+        padding:1rem 1rem 0 0;
+        border-bottom: 1px solid variables.$secondary-color-divider;
+    }
+    &__wrapper-name-date{
+        display: flex;
+        justify-content: space-between;
     }
    
 }
