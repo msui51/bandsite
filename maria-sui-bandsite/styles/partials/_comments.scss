@@ -6,17 +6,14 @@
     &__title{
 
     }
-    &__wrapper{
+    &__overall-wrapper{
         display: flex;
-        justify-content: space-between;
         border-bottom: 1px solid variables.$secondary-color-divider;
         padding:1rem 1rem 1rem 0;
         
     }
-    &__wrapper-name-date{
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 1rem;
+    &__wrapper--right{
+        padding:0 0 1rem 1rem;
     }
     &__img{
         height:2.25rem;
@@ -24,33 +21,28 @@
         border-radius: 50%;
     }
 
-    &__wrapper-input{
-        // width:85%;
+
+    &__label{
+        color:variables.$primary-color-inactiveCTA;
+        padding-bottom:1rem;
         
     }
 
-    &__input-title{
-        color:variables.$primary-color-inactiveCTA;
-        padding-bottom:0.25rem;
-    }
 
-    // &__input-textarea {
-    //     resize:none;
-    //     // width:85%;
-    //     padding:0.75rem;
-    //     border-radius: 4px;
-    //     border: 1px solid variables.$primary-color-inactiveCTA;
-    // }
-
-    // &__input-textarea--small {
-    //     height: 2.25rem;
-    // }
-    &__input-name{
-        width: 100%;
-    }
-    &__input-comment{
+    &__input{
+        margin: 4px 0 20px 0;
+        height: 36px;
         width:100%;
+        border-radius: 4px;
+        padding:12px;
+        border: 1px solid variables.$secondary-color-divider;
     }
+
+    &__input--comment{
+        padding-bottom: 4rem;
+        margin-bottom: 1rem;
+    }
+   
     &__button{
         display: block;
        width:100%;
@@ -64,7 +56,5 @@
         border-radius: 50%;
     
     }
-    &__wrapper--right{
-        width:85%;
-    }
+   
 }

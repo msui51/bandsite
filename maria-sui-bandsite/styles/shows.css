@@ -296,7 +296,7 @@
     content: "Date Venue Location";
     position: absolute;
     top: 100px;
-    word-spacing: 150px;
+    word-spacing: 154px;
     color: #afafaf;
     font-size: 1.2rem;
   }
@@ -317,7 +317,6 @@
 @media (min-width: 768px) {
   .main__item {
     flex-direction: row;
-    justify-content: space-between;
     align-items: baseline;
     padding-top: 2rem;
   }
@@ -339,6 +338,7 @@
 }
 .main__item-detail {
   padding-bottom: 1rem;
+  width: 35%;
 }
 .main__item-detail--bold {
   font-weight: 700;

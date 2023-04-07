@@ -17,9 +17,11 @@
                 content: "Date Venue Location";
                 position: absolute;
                 top:100px;
-                word-spacing: 150px;
+                word-spacing: 154px;
+                // padding-left:0.15rem;
                 color:variables.$primary-color-inactiveCTA;
                 font-size: 1.2rem;
+                
                 
             }
         }
@@ -72,7 +74,7 @@
         @include mixins.tablet{
             // row-gap: 0;
             flex-direction: row;
-            justify-content: space-between;
+            // justify-content: space-between;
             align-items: baseline;
             padding-top:2rem;
             &:hover{
@@ -101,6 +103,7 @@
     }
     &__item-detail{
         padding-bottom: 1rem;
+        width:35%;
     }
     &__item-detail--bold{
         font-weight: 700;
