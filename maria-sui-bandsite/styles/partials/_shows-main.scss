@@ -103,7 +103,9 @@
     }
     &__item-detail{
         padding-bottom: 1rem;
-        width:35%;
+        @include mixins.tablet{
+            width:33%;
+        }
     }
     &__item-detail--bold{
         font-weight: 700;

@@ -374,7 +374,7 @@
 @media (min-width: 768px) {
   .footer__logo {
     position: absolute;
-    right: 3.5rem;
+    right: 2rem;
     top: 2.75rem;
   }
 }
