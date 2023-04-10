@@ -46,10 +46,12 @@ function displayComments(){
         headerName.innerText=commentsArr[i].name;
 
         const date=document.createElement("p");
+        date.classList.add("comments__date");
         date.innerText=commentsArr[i].date;
         nameDate.appendChild(date);
 
         const paragraph=document.createElement("p");
+        paragraph.classList.add("comments__paragraph");
         paragraph.innerText=commentsArr[i].text;
         divText.appendChild(paragraph);
     
@@ -58,20 +60,18 @@ function displayComments(){
 displayComments();  
 
 const form=document.querySelector("form");
+const currentTime= Date.now();
 
 form.addEventListener("submit", function (e){
     e.preventDefault();
     const nameVal=e.target.name.value;
     const commentVal=e.target.textarea.value;
-    if (nameVal.length===0){
-        const nameInputForm=document.querySelector(".comments__input--name");
-        nameInputForm.style.border="1px solid #D22D2D";
-    }else{
-        commentsArr.unshift({
+    
+    commentsArr.unshift({
         name: nameVal,
         text: commentVal,
-        date: Date.now()
-    })};
+        date: currentTime
+    });
     displayComments();
     e.target.reset();
 });

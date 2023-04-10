@@ -164,7 +164,6 @@
 @media (min-width: 768px) {
   .main__img {
     padding: 0 2.25rem 2.25rem 2.25rem;
-    width: 90%;
   }
 }
 @media (min-width: 1280px) {
@@ -412,18 +411,46 @@
 .comments {
   padding: 1rem 0 1rem 1rem;
 }
+@media (min-width: 768px) {
+  .comments {
+    padding-bottom: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .comments__title {
+    font-size: 2.25rem;
+    padding: 3rem 0 2.25rem 2.25rem;
+  }
+}
 .comments__form-wrapper {
   display: flex;
   border-bottom: 1px solid #e1e1e1;
   padding: 1rem 1rem 1rem 0;
 }
+@media (min-width: 768px) {
+  .comments__form-wrapper {
+    padding: 0 0 1rem;
+    margin: 0 4.5rem;
+  }
+}
 .comments__wrapper--right {
   padding: 0 0 1rem 1rem;
+}
+@media (min-width: 768px) {
+  .comments__wrapper--right {
+    width: 100%;
+  }
 }
 .comments__img {
   height: 2.25rem;
   width: 2.25rem;
   border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .comments__img {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 .comments__label {
   color: #afafaf;
@@ -442,6 +469,12 @@
   margin-bottom: 1rem;
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  .comments__button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 .comments__button {
   display: block;
   width: 100%;
@@ -453,8 +486,11 @@
   font-weight: 700;
   padding: 0.5rem;
 }
-.comments__wrapper {
-  display: flex;
+@media (min-width: 768px) {
+  .comments__button {
+    width: 30%;
+    font-size: 1rem;
+  }
 }
 .comments__wrapper-no-img {
   background-color: #e1e1e1;
@@ -463,13 +499,33 @@
   border-radius: 50%;
   padding-right: 2.5rem;
 }
+@media (min-width: 768px) {
+  .comments__wrapper-no-img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .comments__wrapper {
+  display: flex;
   padding: 1rem 1rem 0 0;
   border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .comments__wrapper {
+    padding: 2rem 0 1rem;
+    margin: 0 4.5rem;
+  }
 }
 .comments__wrapper-name-date {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+.comments__paragraph {
+  line-height: 1.5rem;
+}
+.comments__date {
+  color: #afafaf;
 }
 
 * {
