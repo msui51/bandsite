@@ -11,7 +11,9 @@
             font-size: 2.25rem;
             padding: 3rem 0 2.25rem 2.25rem;
         }
-
+        @include mixins.desktop{
+            padding-left:5.75rem;
+        }
     }
     &__form-wrapper{
         display: flex;
@@ -21,7 +23,9 @@
             padding:0 0 1rem;
             margin: 0 4.5rem;
         }
-        
+        @include mixins.desktop{
+            margin:0 20rem;
+        }
     }
     &__wrapper--right{
         padding:0 0 1rem 1rem;
@@ -95,6 +99,9 @@
         @include mixins.tablet{
             padding: 2rem 0 1rem;
             margin: 0 4.5rem;
+        }
+        @include mixins.desktop{
+            margin: 0 20rem;
         }
     }
     &__wrapper-name-date{

@@ -39,6 +39,7 @@
         @include mixins.desktop{
             width:60vw;
             height:85vh;
+            padding:0 0 2.25rem;
         }
     }
 
@@ -56,7 +57,7 @@
         }
         @include mixins.desktop{
             padding-left: 10.5rem;
-            width:65%;
+            padding-right:15rem;
         }
     }
 

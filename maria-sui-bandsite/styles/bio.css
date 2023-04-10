@@ -170,6 +170,7 @@
   .main__img {
     width: 60vw;
     height: 85vh;
+    padding: 0 0 2.25rem;
   }
 }
 .main__img-text {
@@ -190,7 +191,7 @@
 @media (min-width: 1280px) {
   .main__img-text {
     padding-left: 10.5rem;
-    width: 65%;
+    padding-right: 15rem;
   }
 }
 @media (min-width: 1280px) {
@@ -422,6 +423,11 @@
     padding: 3rem 0 2.25rem 2.25rem;
   }
 }
+@media (min-width: 1280px) {
+  .comments__title {
+    padding-left: 5.75rem;
+  }
+}
 .comments__form-wrapper {
   display: flex;
   border-bottom: 1px solid #e1e1e1;
@@ -431,6 +437,11 @@
   .comments__form-wrapper {
     padding: 0 0 1rem;
     margin: 0 4.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form-wrapper {
+    margin: 0 20rem;
   }
 }
 .comments__wrapper--right {
@@ -514,6 +525,11 @@
   .comments__wrapper {
     padding: 2rem 0 1rem;
     margin: 0 4.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__wrapper {
+    margin: 0 20rem;
   }
 }
 .comments__wrapper-name-date {
