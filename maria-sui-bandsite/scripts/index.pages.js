@@ -66,14 +66,20 @@ form.addEventListener("submit", function (e){
     e.preventDefault();
     const nameVal=e.target.name.value;
     const commentVal=e.target.textarea.value;
-    
     commentsArr.unshift({
         name: nameVal,
         text: commentVal,
         date: currentTime
     });
-    displayComments();
-    e.target.reset();
+    const input=document.getElementById("name");
+    const textarea=document.getElementById("textarea");
+    if (commentVal==="" || nameVal===""){
+        input.style.border="1px solid #D22D2D";
+        textarea.style.border="1px solid #D22D2D";
+    }else {
+        displayComments();
+        e.target.reset();
+    };
 });
 
 
