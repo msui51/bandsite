@@ -95,7 +95,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/hero-bio.jpg");
   display: block;
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -114,7 +114,6 @@
 .hero__title {
   color: #ffffff;
   padding-left: 1rem;
-  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -142,19 +141,12 @@
   }
 }
 .main__title {
-  font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .main__title {
     font-size: 2.25rem;
     padding-bottom: 2.25rem;
-  }
-}
-@media (min-width: 1280px) {
-  .main__img-wrapper {
-    display: flex;
-    justify-content: center;
   }
 }
 .main__img {
@@ -168,9 +160,7 @@
 }
 @media (min-width: 1280px) {
   .main__img {
-    width: 60vw;
-    height: 85vh;
-    padding: 0 0 2.25rem;
+    padding: 0 10rem 2.25rem 10.5rem;
   }
 }
 .main__img-text {
@@ -444,14 +434,6 @@
     margin: 0 20rem;
   }
 }
-.comments__wrapper--right {
-  padding: 0 0 1rem 1rem;
-}
-@media (min-width: 768px) {
-  .comments__wrapper--right {
-    width: 100%;
-  }
-}
 .comments__img {
   height: 2.25rem;
   width: 2.25rem;
@@ -461,6 +443,14 @@
   .comments__img {
     height: 3rem;
     width: 3rem;
+  }
+}
+.comments__wrapper--right {
+  padding: 0 0 1rem 1rem;
+}
+@media (min-width: 768px) {
+  .comments__wrapper--right {
+    width: 100%;
   }
 }
 .comments__label {
@@ -503,19 +493,6 @@
     font-size: 1rem;
   }
 }
-.comments__wrapper-no-img {
-  background-color: #e1e1e1;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  padding-right: 2.5rem;
-}
-@media (min-width: 768px) {
-  .comments__wrapper-no-img {
-    width: 3rem;
-    height: 3rem;
-  }
-}
 .comments__wrapper {
   display: flex;
   padding: 1rem 1rem 0 0;
@@ -532,16 +509,29 @@
     margin: 0 20rem;
   }
 }
+.comments__wrapper-no-img {
+  background-color: #e1e1e1;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  padding-right: 2.5rem;
+}
+@media (min-width: 768px) {
+  .comments__wrapper-no-img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .comments__wrapper-name-date {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.75rem;
 }
-.comments__paragraph {
-  line-height: 1.5rem;
-}
 .comments__date {
   color: #afafaf;
+}
+.comments__paragraph {
+  line-height: 1.5rem;
 }
 
 * {

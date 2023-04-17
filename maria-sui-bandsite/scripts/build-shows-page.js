@@ -1,13 +1,7 @@
 
 
-// site-main section
+// shows array
 
-const main = document.querySelector("main");
-const mainHeader = document.createElement("h2");
-main.classList.add("main");
-mainHeader.classList.add("main__title");
-mainHeader.innerText="Shows";
-main.appendChild(mainHeader);
 
 let showsArr = [
     {
@@ -41,12 +35,25 @@ let showsArr = [
         location:"San Francisco, CA"
     }
 ];
+
+    // shows page main section
+
+    const main = document.querySelector("main");
+    const mainHeader = document.createElement("h2");
+    main.classList.add("main");
+    mainHeader.classList.add("main__title");
+    mainHeader.innerText="Shows";
+    main.appendChild(mainHeader);
+
+
     const ul = document.createElement("ul");
     ul.classList.add("main__list");
     main.appendChild(ul);
 
     for(let i=0; i<showsArr.length; i++){
+        
         let show=showsArr[i];
+        
         const li= document.createElement("li");
         li.classList.add("main__item");
 
@@ -96,6 +103,8 @@ let showsArr = [
        
         ul.appendChild(li);
     }
+
+    // adding hover and select state for shows
 
     const li=document.querySelectorAll(".main__item");
     li.forEach(element => {

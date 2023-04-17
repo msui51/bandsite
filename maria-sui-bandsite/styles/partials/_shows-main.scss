@@ -1,124 +1,118 @@
 @use './variables';
 @use './mixins';
 
+// shows page main section
+
 .main {
     padding: 2rem 0rem 1rem;
-    
     @include mixins.tablet{
         padding:2rem 0.75rem 2.25rem;
         position: relative;
+    }
+    @include mixins.desktop{
+        padding:2rem 5rem 2.25rem;
     }
 
     &__title{
         padding: 1rem;
         @include mixins.tablet{
+            font-size: 2.25rem;
             padding:1rem 0 1rem 0.75rem;
             &:before{
-                content: "Date Venue Location";
+                content: "DATE VENUE LOCATION";
                 position: absolute;
-                top:100px;
+                top:125px;
                 word-spacing: 154px;
-                // padding-left:0.15rem;
                 color:variables.$primary-color-inactiveCTA;
-                font-size: 1.2rem;
-                
-                
+                font-size: 1rem;
+            }
+        }
+        @include mixins.desktop{
+            &:before{
+                content: "DATE VENUE LOCATION";
+                position:absolute;
+                margin-left: 14rem;
+                word-spacing: 200px;
             }
         }
     }
-    // &__box{
-    //     border-bottom: 1px solid variables.$primary-color-inactiveCTA;
-    //     // padding:1rem 1rem 1rem 0;
-    //     padding:1rem 1rem 1rem 1rem;
-    //     height: 15.625rem;
-    //     // width:100%;
-    //     display:flex;
-    //     flex-direction: column;
-    //     justify-content: space-between;
-    //     @include mixins.tablet {
-    //         // flex-direction: row;
-    //         // align-items:last baseline;
-    //         // padding:1.5rem 0.889rem;
-    //         // height:100px;
-        
-    //     }
-    // }
+
+    // wraps all of the shows
+
     &__list{
-    
         list-style-type: none;
         padding:0 0 1rem 0;
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
-     
         @include mixins.tablet{
-            // &:before{
-            //     content: "Date Venue Location";
-            //     position: absolute;
-            //     left:150px;
-                
-            // }
-            // display: flex;
-            // flex-direction: row;
-            // flex-wrap: wrap;
-            // width:90%;
-                
+            padding-top: 2.5rem;      
         }
     }
+
+    // wraps individual shows
+
     &__item{
         border-bottom: 1px solid variables.$primary-color-inactiveCTA;
         padding:1rem 1rem 1rem 1rem;
         display:flex;
         flex-direction: column;
         row-gap: 5px;
+        &:hover{
+            background-color: variables.$secondary-color-background;
+            cursor:pointer;   
+           }
         @include mixins.tablet{
-            // row-gap: 0;
             flex-direction: row;
-            // justify-content: space-between;
             align-items: baseline;
             padding-top:2rem;
-            &:hover{
-             background-color: variables.$secondary-color-background;
-             cursor:pointer;   
-            }
+        }
+        @include mixins.desktop{
+            margin-left: 14rem;
         }      
     }
-    &__item--active{
-        background-color: variables.$secondary-color-divider;
-    }
+
+    // the text "Date","Venue","location"
+
     &__item-title{
         color:variables.$primary-color-inactiveCTA;
     }
 
-    // &__item-title--visible{
-    //     @include mixins.tablet{
-    //         padding-bottom: 1rem;
-    //     }
-    // }
-
+    // for the text "Date","Venue","Location"
+    
     &__item-title--disappear{
         @include mixins.tablet{
             font-size: 0;
         }
     }
+
+    //info about the shows
+
     &__item-detail{
         padding-bottom: 1rem;
         @include mixins.tablet{
-            width:33%;
+            width:32%;
         }
     }
+
+    // actual date of the shows
+
     &__item-detail--bold{
         font-weight: 700;
     }
 
     &__cta-button{
         @include mixins.cta;
+        &:hover{
+            cursor: pointer;
+        }
         @include mixins.tablet{
             width:9.375rem;
-            &:hover{
-                cursor: pointer;
-            }
         }
     }
-        
+
+    // selected state for shows
+
+    &__item--active{
+        background-color: variables.$secondary-color-divider;
+    }
 }

@@ -220,30 +220,34 @@
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/hero-shows.jpg");
   width: 100%;
-  height: 70vh;
   background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 3rem 1rem;
   overflow: auto;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 90vh;
+    padding-left: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .hero {
     height: 100vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
 .hero__wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-  padding-right: 5rem;
+  padding-right: 3rem;
 }
 @media (min-width: 768px) {
   .hero__wrapper {
@@ -252,32 +256,35 @@
 }
 .hero__subtitle {
   color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .hero__subtitle {
-    padding-left: 2.25rem;
     font-size: 1.5rem;
     font-weight: 700;
   }
 }
 .hero__title {
   color: #ffffff;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .hero__title {
     font-size: 3.75rem;
-    padding-left: 2.25rem;
     width: 80%;
   }
 }
 @media (min-width: 1280px) {
   .hero__title {
-    padding-left: 5rem;
+    width: 75%;
   }
+}
+.hero__song {
+  border-radius: 3%;
 }
 @media (min-width: 768px) {
   .hero__song {
-    padding-left: 2.25rem;
     width: 60%;
   }
 }
@@ -291,20 +298,34 @@
     position: relative;
   }
 }
+@media (min-width: 1280px) {
+  .main {
+    padding: 2rem 5rem 2.25rem;
+  }
+}
 .main__title {
   padding: 1rem;
 }
 @media (min-width: 768px) {
   .main__title {
+    font-size: 2.25rem;
     padding: 1rem 0 1rem 0.75rem;
   }
   .main__title:before {
-    content: "Date Venue Location";
+    content: "DATE VENUE LOCATION";
     position: absolute;
-    top: 100px;
+    top: 125px;
     word-spacing: 154px;
     color: #afafaf;
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__title:before {
+    content: "DATE VENUE LOCATION";
+    position: absolute;
+    margin-left: 14rem;
+    word-spacing: 200px;
   }
 }
 .main__list {
@@ -313,6 +334,11 @@
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .main__list {
+    padding-top: 2.5rem;
+  }
+}
 .main__item {
   border-bottom: 1px solid #afafaf;
   padding: 1rem 1rem 1rem 1rem;
@@ -320,19 +346,21 @@
   flex-direction: column;
   row-gap: 5px;
 }
+.main__item:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   .main__item {
     flex-direction: row;
     align-items: baseline;
     padding-top: 2rem;
   }
-  .main__item:hover {
-    background-color: #fafafa;
-    cursor: pointer;
-  }
 }
-.main__item--active {
-  background-color: #e1e1e1;
+@media (min-width: 1280px) {
+  .main__item {
+    margin-left: 14rem;
+  }
 }
 .main__item-title {
   color: #afafaf;
@@ -347,7 +375,7 @@
 }
 @media (min-width: 768px) {
   .main__item-detail {
-    width: 33%;
+    width: 32%;
   }
 }
 .main__item-detail--bold {
@@ -362,13 +390,16 @@
   font-weight: 700;
   padding: 0.5rem;
 }
+.main__cta-button:hover {
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   .main__cta-button {
     width: 9.375rem;
   }
-  .main__cta-button:hover {
-    cursor: pointer;
-  }
+}
+.main__item--active {
+  background-color: #e1e1e1;
 }
 
 * {
