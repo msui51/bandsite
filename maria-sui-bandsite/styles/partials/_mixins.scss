@@ -6,12 +6,19 @@
     }
 }
 
- // @media (min-width: variables.$tablet-breakpoint){
-        //     font-size: 2.25rem;
-        //     padding-bottom: 2.25rem;
-        // }
 @mixin desktop {
-    @media (min-width:$desktop-breakpoint){
+    @media (min-width:variables.$desktop-breakpoint){
         @content;
     }
+}
+
+@mixin cta {
+    height:2.5rem;
+    border-radius:4px;
+    color:variables.$primary-color-light;
+    background-color: variables.$primary-color-dark;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding:0.5rem;
+    
 }

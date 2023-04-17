@@ -1,0 +1,413 @@
+.header {
+  background-color: #323232;
+  width: 100%;
+  padding: 1rem 0 0 0;
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0 0;
+  }
+}
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .header__logo {
+    padding-left: 5rem;
+  }
+}
+.header__nav {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .header__nav {
+    width: 25%;
+  }
+}
+.header__nav-list {
+  display: flex;
+  padding-top: 1rem;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .header__nav-list {
+    padding-top: 0;
+    padding-left: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.header__nav-item {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .header__nav-item {
+    font-size: 0.875rem;
+  }
+}
+.header__nav-item--active {
+  font-weight: 700;
+  width: 50%;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .header__nav-item--active {
+    width: auto;
+  }
+}
+.header__nav-item--inactive {
+  width: 50%;
+}
+.header__nav-item--inactive:hover {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+@media (min-width: 768px) {
+  .header__nav-item--inactive {
+    width: auto;
+  }
+  .header__nav-item--inactive:hover {
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+  }
+}
+.header__nav-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.header__nav-link--inactive {
+  color: #e1e1e1;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 1.5rem 0 1rem 2rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 1.5rem 6.75rem 2rem;
+  }
+}
+.footer__title-wrapper {
+  width: 60%;
+}
+@media (min-width: 768px) {
+  .footer__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__title-wrapper {
+    width: 50%;
+  }
+}
+.footer__title {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: 2rem;
+  }
+}
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-bottom: 1.75rem;
+  width: 75%;
+}
+@media (min-width: 768px) {
+  .footer__icons {
+    width: 45%;
+  }
+}
+@media (min-width: 768px) {
+  .footer__contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__contact-wrapper {
+    width: 75%;
+  }
+}
+.footer__contact {
+  padding-bottom: 2rem;
+  line-height: 1.125rem;
+}
+.footer__contact:last-of-type {
+  padding-bottom: 4.5rem;
+}
+@media (min-width: 768px) {
+  .footer__contact {
+    font-size: 0.875rem;
+  }
+}
+.footer__contact-text {
+  padding-bottom: 1.5rem;
+}
+.footer__contact-text--bold {
+  font-weight: 700;
+}
+.footer__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    position: absolute;
+    right: 2rem;
+    top: 2.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__logo {
+    right: 7rem;
+  }
+}
+.footer__copyright {
+  display: block;
+  padding-top: 1rem;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff2"), url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/hero-shows.jpg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem 1rem 3rem 1rem;
+  overflow: auto;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 100vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding-right: 3rem;
+}
+@media (min-width: 768px) {
+  .hero__wrapper {
+    padding-right: 0;
+  }
+}
+.hero__subtitle {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .hero__subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+.hero__title {
+  color: #ffffff;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    width: 80%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__title {
+    width: 75%;
+  }
+}
+.hero__song {
+  border-radius: 3%;
+}
+@media (min-width: 768px) {
+  .hero__song {
+    width: 60%;
+  }
+}
+
+.main {
+  padding: 2rem 0rem 1rem;
+}
+@media (min-width: 768px) {
+  .main {
+    padding: 2rem 0.75rem 2.25rem;
+    position: relative;
+  }
+}
+@media (min-width: 1280px) {
+  .main {
+    padding: 2rem 5rem 2.25rem;
+  }
+}
+.main__title {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .main__title {
+    font-size: 2.25rem;
+    padding: 1rem 0 1rem 0.75rem;
+  }
+  .main__title:before {
+    content: "DATE VENUE LOCATION";
+    position: absolute;
+    top: 125px;
+    word-spacing: 154px;
+    color: #afafaf;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__title:before {
+    content: "DATE VENUE LOCATION";
+    position: absolute;
+    margin-left: 14rem;
+    word-spacing: 200px;
+  }
+}
+.main__list {
+  list-style-type: none;
+  padding: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .main__list {
+    padding-top: 2.5rem;
+  }
+}
+.main__item {
+  border-bottom: 1px solid #afafaf;
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.main__item:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .main__item {
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__item {
+    margin-left: 14rem;
+  }
+}
+.main__item-title {
+  color: #afafaf;
+}
+@media (min-width: 768px) {
+  .main__item-title--disappear {
+    font-size: 0;
+  }
+}
+.main__item-detail {
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .main__item-detail {
+    width: 32%;
+  }
+}
+.main__item-detail--bold {
+  font-weight: 700;
+}
+.main__cta-button {
+  height: 2.5rem;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #323232;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+.main__cta-button:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .main__cta-button {
+    width: 9.375rem;
+  }
+}
+.main__item--active {
+  background-color: #e1e1e1;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "AvenirNext LT Pro";
+  box-sizing: border-box;
+}/*# sourceMappingURL=shows.css.map */

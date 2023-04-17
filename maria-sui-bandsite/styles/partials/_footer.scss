@@ -1,16 +1,16 @@
 @use './variables';
-
+@use './mixins';
 
 .footer{
     background-color: variables.$primary-color-dark;
     color: variables.$primary-color-light;
     padding: 1.5rem 0 1rem 2rem;
-    @media (min-width:variables.$tablet-breakpoint){
+    @include mixins.tablet{
         padding-left:3rem;
         padding-right: 3rem;
         position: relative;
     }
-    @media (min-width:variables.$desktop-breakpoint){
+    @include mixins.desktop{
         padding:1.5rem 6.75rem 2rem;
     }
 
@@ -18,14 +18,14 @@
 
     &__title-wrapper {
         width: 60%;
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             padding-top:1rem;
             padding-bottom: 1.5rem;
         }
-        @media (min-width:variables.$desktop-breakpoint){
+        @include mixins.desktop{
             width:50%;
         }
     }
@@ -33,7 +33,7 @@
     &__title {
         font-size: 1.5rem;
         padding-bottom: 1rem;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             font-size: 2rem;
         }
     }
@@ -44,7 +44,7 @@
         padding-bottom: 1rem;
         padding-bottom: 1.75rem;
         width:75%;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             width: 45%;
         }
     }
@@ -52,11 +52,11 @@
     // wraps all of the contacts
 
     &__contact-wrapper {
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             display: flex;
             justify-content: space-between;
         }
-        @media (min-width:variables.$desktop-breakpoint){
+        @include mixins.desktop{
             width: 75%;
         }
     }
@@ -69,7 +69,7 @@
         &:last-of-type {
             padding-bottom: 4.5rem;
         }
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             font-size: 0.875rem;
         }
     }
@@ -86,16 +86,16 @@
 
     &__link {
         text-decoration: none;
-        color: variables.$primary-color-light
+        color: variables.$primary-color-light;
     }
     
     &__logo {
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             position:absolute;
-            right:3.5rem;
+            right:2rem;
             top: 2.75rem;
         }
-        @media (min-width:variables.$desktop-breakpoint){
+        @include mixins.desktop{
             right:7rem;
         }
     }

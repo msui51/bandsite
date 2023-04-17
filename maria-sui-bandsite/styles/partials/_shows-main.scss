@@ -1,0 +1,118 @@
+@use './variables';
+@use './mixins';
+
+// shows page main section
+
+.main {
+    padding: 2rem 0rem 1rem;
+    @include mixins.tablet{
+        padding:2rem 0.75rem 2.25rem;
+        position: relative;
+    }
+    @include mixins.desktop{
+        padding:2rem 5rem 2.25rem;
+    }
+
+    &__title{
+        padding: 1rem;
+        @include mixins.tablet{
+            font-size: 2.25rem;
+            padding:1rem 0 1rem 0.75rem;
+            &:before{
+                content: "DATE VENUE LOCATION";
+                position: absolute;
+                top:125px;
+                word-spacing: 154px;
+                color:variables.$primary-color-inactiveCTA;
+                font-size: 1rem;
+            }
+        }
+        @include mixins.desktop{
+            &:before{
+                content: "DATE VENUE LOCATION";
+                position:absolute;
+                margin-left: 14rem;
+                word-spacing: 200px;
+            }
+        }
+    }
+
+    // wraps all of the shows
+
+    &__list{
+        list-style-type: none;
+        padding:0 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        @include mixins.tablet{
+            padding-top: 2.5rem;      
+        }
+    }
+
+    // wraps individual shows
+
+    &__item{
+        border-bottom: 1px solid variables.$primary-color-inactiveCTA;
+        padding:1rem 1rem 1rem 1rem;
+        display:flex;
+        flex-direction: column;
+        row-gap: 5px;
+        &:hover{
+            background-color: variables.$secondary-color-background;
+            cursor:pointer;   
+           }
+        @include mixins.tablet{
+            flex-direction: row;
+            align-items: baseline;
+            padding-top:2rem;
+        }
+        @include mixins.desktop{
+            margin-left: 14rem;
+        }      
+    }
+
+    // the text "Date","Venue","location"
+
+    &__item-title{
+        color:variables.$primary-color-inactiveCTA;
+    }
+
+    // for the text "Date","Venue","Location"
+    
+    &__item-title--disappear{
+        @include mixins.tablet{
+            font-size: 0;
+        }
+    }
+
+    //info about the shows
+
+    &__item-detail{
+        padding-bottom: 1rem;
+        @include mixins.tablet{
+            width:32%;
+        }
+    }
+
+    // actual date of the shows
+
+    &__item-detail--bold{
+        font-weight: 700;
+    }
+
+    &__cta-button{
+        @include mixins.cta;
+        &:hover{
+            cursor: pointer;
+        }
+        @include mixins.tablet{
+            width:9.375rem;
+        }
+    }
+
+    // selected state for shows
+
+    &__item--active{
+        background-color: variables.$secondary-color-divider;
+    }
+}

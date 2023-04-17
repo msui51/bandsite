@@ -4,46 +4,32 @@
 
 .main {
     padding: 1.5rem 1rem 1rem;
-    @media (min-width: variables.$tablet-breakpoint){
+    @include mixins.tablet{
         padding: 3rem 2.25rem 2.25rem;
     }
-    @media (min-width:variables.$desktop-breakpoint){
+    @include mixins.desktop{
         padding: 3.5rem 5rem; 
     }
-
+    
     &__title{
-        font-size: 1.5rem;
         padding-bottom: 1rem;
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             font-size: 2.25rem;
             padding-bottom: 2.25rem;
         }
-        //mixins isn't working for me
-        // @include tablet {
-        //     font-size: 2.25rem;
-        // }
-
     }
     
-    // wraps the img
-
-    &__img-wrapper{
-        @media (min-width:variables.$desktop-breakpoint){
-            display: flex;
-            justify-content: center;
-        }
-    }
+    // img
 
     &__img {
         width:100%;
         padding-bottom: 1rem;
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             padding: 0 2.25rem 2.25rem 2.25rem;
-            width:90%;
+           
         }
-        @media (min-width:variables.$desktop-breakpoint){
-            width:60vw;
-            height:85vh;
+        @include mixins.desktop{
+            padding:0 10rem 2.25rem 10.5rem;
         }
     }
 
@@ -51,7 +37,7 @@
         font-weight: 700;
         line-height: 1.5rem;
         padding-bottom: 1rem;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             padding: 0 2.25rem 1.5rem 2.25rem;
             &:last-of-type {
                 padding-bottom: 2.75rem;
@@ -59,16 +45,16 @@
             font-size: 1.5rem;
             line-height: 2rem;
         }
-        @media (min-width:variables.$desktop-breakpoint){
+        @include mixins.desktop{
             padding-left: 10.5rem;
-            width:65%;
+            padding-right:15rem;
         }
     }
 
     // wraps the subtitle and paragraphs 
 
     &__wrapper{
-        @media (min-width:variables.$desktop-breakpoint){
+        @include mixins.desktop{
             padding-left:8.25rem;
             padding-right:8.25rem;
         }
@@ -79,7 +65,7 @@
         font-weight: 600;
         padding-bottom: 1rem;
         padding-top: 1rem;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             padding: 0 2.25rem 1.75rem 2.25rem;
             font-size: 1.5rem;
         }
@@ -88,7 +74,7 @@
     // wraps both paragraphs
 
     &__text-wrapper{
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             display: flex;
         }
     }
@@ -104,7 +90,7 @@
     &__text{
         font-size: 0.813rem;
         line-height: 1.3rem;
-        @media (min-width:variables.$tablet-breakpoint){
+        @include mixins.tablet{
             padding-left: 2.25rem;
             padding-right: 2.25rem;
             font-size: 0.875rem;

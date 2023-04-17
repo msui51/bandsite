@@ -1,12 +1,13 @@
 @use './variables';
+@use './mixins';
 
 
 .carousel {
     background-color: variables.$secondary-color-background;
-    @media (min-width: variables.$tablet-breakpoint){
+    @include mixins.tablet{
         padding: 3rem 2.25rem 2.25rem;
     }
-    @media (min-width:variables.$desktop-breakpoint){
+    @include mixins.desktop{
         padding: 3rem 5rem 2.25rem;
     }
     
@@ -14,7 +15,7 @@
         padding-top:1.5rem;
         padding-bottom:1rem;
         padding-left:1rem;
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             padding-bottom: 2.25rem;
             font-size: 2.25rem;
         }
@@ -25,7 +26,7 @@
     &__imgs{
         padding-left:1rem;
         padding-right:1rem;
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -42,7 +43,7 @@
         &:hover {
             filter:grayscale(0);
         } 
-        @media (min-width: variables.$tablet-breakpoint){
+        @include mixins.tablet{
             width:30%;
         }
     }

@@ -1,20 +1,16 @@
 @use './partials/header';
-@use './partials/hero';
-@use './partials/main';
-@use './partials/carousel';
 @use './partials/footer';
 @use './partials/variables';
 @use './partials/mixins';
 @use './partials/fonts';
-@use './partials/comments';
+@use './partials/shows-hero';
+@use './partials/shows-main';
 
 * {
-    margin: 0;
+    margin:0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'AvenirNext LT Pro';
     box-sizing: border-box;
 }
-

@@ -1,0 +1,69 @@
+@use './variables'; 
+@use './mixins';
+
+// whole hero section
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url("../../assets/images/hero-shows.jpg");
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:3rem 1rem 3rem 1rem;
+    overflow: auto;
+    @include mixins.tablet{
+        padding-left: 2.25rem;
+    }
+    @include mixins.desktop{
+        height:100vh;  
+        padding-left: 5rem;
+        padding-right: 5rem;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    //wraps the text
+
+    &__wrapper{
+        display:flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        padding-right: 3rem;
+        @include mixins.tablet{
+            padding-right:0;
+        }
+    }
+    
+    &__subtitle {
+        color:variables.$primary-color-light;
+        font-weight: 400;
+        font-size: 1rem;
+        @include mixins.tablet{
+            font-size:1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        color:variables.$primary-color-light;
+        padding-bottom: 1rem;
+        @include mixins.tablet{
+            font-size: 3.75rem;
+            width: 80%;
+        }
+        @include mixins.desktop{
+            width:75%;
+        }
+    }
+
+    &__song {
+        border-radius: 3%;
+        @include mixins.tablet{
+            width:60%;
+        }
+    }
+}

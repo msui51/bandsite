@@ -1,0 +1,147 @@
+@use './variables';
+@use './mixins';
+
+
+// all of comments section
+
+.comments {
+    padding: 1rem 0 1rem 1rem;
+    @include mixins.tablet{
+        padding-bottom:2rem;
+    }
+    
+    &__title{
+        @include mixins.tablet{
+            font-size: 2.25rem;
+            padding: 3rem 0 2.25rem 2.25rem;
+        }
+        @include mixins.desktop{
+            padding-left:5.75rem;
+        }
+    }
+
+    //wraps form field include avatar
+
+    &__form-wrapper{
+        display: flex;
+        border-bottom: 1px solid variables.$secondary-color-divider;
+        padding:1rem 1rem 1rem 0;
+        @include mixins.tablet{
+            padding:0 0 1rem;
+            margin: 0 4.5rem;
+        }
+        @include mixins.desktop{
+            margin:0 20rem;
+        }
+    }
+
+    &__img{
+        height:2.25rem;
+        width:2.25rem;
+        border-radius: 50%;
+        @include mixins.tablet{
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+
+    //wraps just the form field
+
+    &__wrapper--right{
+        padding:0 0 1rem 1rem;
+        @include mixins.tablet{
+            width:100%;
+        }
+    }
+
+    &__label{
+        color:variables.$primary-color-inactiveCTA;
+        padding-bottom:1rem;
+    }
+
+    // input for name
+
+    &__input{
+        margin: 4px 0 20px 0;
+        height: 36px;
+        width:100%;
+        border-radius: 4px;
+        padding:12px;
+        border: 1px solid variables.$secondary-color-divider;
+    }
+    //input for comment
+
+    &__input--comment{
+        padding-bottom: 4rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    //wraps the comment button
+
+    &__button-wrapper{
+        @include mixins.tablet{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__button{
+        display: block;
+       width:100%;
+        @include mixins.cta;
+        @include mixins.tablet{
+            width:30%;
+            font-size: 1rem;
+        }
+    }
+
+     //wraps individual comments
+
+     &__wrapper{
+        display: flex;
+        padding:1rem 1rem 0 0;
+        border-bottom: 1px solid variables.$secondary-color-divider;
+        @include mixins.tablet{
+            padding: 2rem 0 1rem;
+            margin: 0 4.5rem;
+        }
+        @include mixins.desktop{
+            margin: 0 20rem;
+        }
+    }
+
+    // wraps the left side of the individual comments
+
+    &__wrapper-no-img{
+        background-color: variables.$secondary-color-divider;
+        width: 2.25rem;
+        height:2.25rem;
+        border-radius: 50%;
+        padding-right:2.5rem;
+        @include mixins.tablet{
+            width:3rem;
+            height:3rem;
+        }
+    }
+
+   // wraps the name and date of the comment
+
+    &__wrapper-name-date{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.75rem;
+    }
+
+    // date of comment
+
+    &__date{
+        color:variables.$primary-color-inactiveCTA;
+    }
+
+    // content of comment
+
+    &__paragraph{
+        line-height: 1.5rem;
+    }
+}
