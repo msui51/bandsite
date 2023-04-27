@@ -38,7 +38,8 @@ function displayComments(response){
 
         const date=document.createElement("p");
         date.classList.add("comments__date");
-        date.innerText=response.data[i].timestamp;
+        commentTime=new Date(response.data[i].timestamp);
+        date.innerText=commentTime.toLocaleDateString();
         nameDate.appendChild(date);
 
         const paragraph=document.createElement("p");
@@ -58,7 +59,10 @@ form.addEventListener("submit", function(e){
         .post("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a", formData)
         .then(response =>{
             console.log(response);
-        });
+        })
+        .error(error=>{
+
+        })
 });
 // form.addEventListener("submit", function (e){
 //     e.preventDefault();
