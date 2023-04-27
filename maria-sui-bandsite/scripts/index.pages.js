@@ -48,7 +48,7 @@ function displayComments(response){
     
     };
 };  
-// displayComments();  
+
 
 const form=document.querySelector("form");
 form.addEventListener("submit", function(e){

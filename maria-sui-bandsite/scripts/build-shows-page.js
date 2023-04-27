@@ -17,7 +17,6 @@
     axios
     .get("https://project-1-api.herokuapp.com/showdates?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
     .then(response=>{
-        console.log(response.data);
         showDates(response);
     })
 
@@ -53,7 +52,8 @@
             date.innerText= "Date";
             place.innerText= "Venue";
             location.innerText= "Location";
-            dateContent.innerText= response.data[i].date;
+            showDate=new Date(response.data[i].date);
+            dateContent.innerText= showDate.toDateString();
             placeContent.innerText=response.data[i].place;
             locationContent.innerText=response.data[i].location;
 
