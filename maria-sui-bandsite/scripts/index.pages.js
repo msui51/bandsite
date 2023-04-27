@@ -1,34 +1,20 @@
-// comments array
-
-let commentsArr =[
-    {
-        name:"Connor Walton",
-        text:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-        date: "02/17/2021",
-    },
-    {
-        name:"Emilie Beach",
-        text:"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-        date: "01/09/2021",
-    },
-    {
-        name:"Miles Acosta",
-        text:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-        date: "12/20/2020",
-    }
-];
-
-//main page comment section
-
 const comments=document.querySelector(".comments");
 const parentWrapper=document.createElement("div");
 parentWrapper.classList.add("comments__wrapper-all");
 comments.appendChild(parentWrapper);
 
+axios
+.get("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
+.then(response=>{
+    displayComments(response);
+});
 
-function displayComments(){    
+
+
+function displayComments(response){    
     parentWrapper.innerText='';
-    for (let i=0; i<commentsArr.length; i++){
+
+    for (let i=0; i<response.data.length; i++){
        
         const childWrapper=document.createElement("div");
         childWrapper.classList.add("comments__wrapper");
@@ -47,46 +33,55 @@ function displayComments(){
         content.appendChild(nameDate);
 
         const headerName=document.createElement("h3");
-        headerName.innerText=commentsArr[i].name;
+        headerName.innerText=response.data[i].name;
         nameDate.appendChild(headerName);
 
         const date=document.createElement("p");
         date.classList.add("comments__date");
-        date.innerText=commentsArr[i].date;
+        date.innerText=response.data[i].timestamp;
         nameDate.appendChild(date);
 
         const paragraph=document.createElement("p");
         paragraph.classList.add("comments__paragraph");
-        paragraph.innerText=commentsArr[i].text;
+        paragraph.innerText=response.data[i].comment;
         content.appendChild(paragraph);
     
     };
 };  
-displayComments();  
+// displayComments();  
 
 const form=document.querySelector("form");
-form.addEventListener("submit", function (e){
+form.addEventListener("submit", function(e){
     e.preventDefault();
-    const nameVal=e.target.name.value;
-    const commentVal=e.target.textarea.value;
-    const currentTime=new Date();
-    const input=document.getElementById("name");
-    const textarea=document.getElementById("textarea");
-    if (commentVal==="" || nameVal===""){
-        input.style.border="1px solid #D22D2D";
-        textarea.style.border="1px solid #D22D2D";
-        e.target.reset();
-    }else {
-        commentsArr.unshift({
-            name: nameVal,
-            text: commentVal,
-            date: currentTime.getDate()+"/"+(currentTime.getMonth()+1)+"/"+currentTime.getFullYear()
+    const formData= new FormData(form);
+    axios
+        .post("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a", formData)
+        .then(response =>{
+            console.log(response);
         });
-        input.style.border="1px solid #e1e1e1";
-        textarea.style.border="1px solid #e1e1e1";
-        displayComments();
-        e.target.reset();
-    };
 });
+// form.addEventListener("submit", function (e){
+//     e.preventDefault();
+//     const nameVal=e.target.name.value;
+//     const commentVal=e.target.textarea.value;
+//     const currentTime=new Date();
+//     const input=document.getElementById("name");
+//     const textarea=document.getElementById("textarea");
+//     if (commentVal==="" || nameVal===""){
+//         input.style.border="1px solid #D22D2D";
+//         textarea.style.border="1px solid #D22D2D";
+//         e.target.reset();
+//     }else {
+//         response.data.unshift({
+//             name: nameVal,
+//             comment: commentVal,
+//             timestamp: currentTime.getDate()+"/"+(currentTime.getMonth()+1)+"/"+currentTime.getFullYear()
+//         });
+//         input.style.border="1px solid #e1e1e1";
+//         textarea.style.border="1px solid #e1e1e1";
+//         displayComments();
+//         e.target.reset();
+//     };
+// }); 
 
 
