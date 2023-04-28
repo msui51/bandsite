@@ -54,14 +54,28 @@ function displayComments(response){
 const form=document.querySelector("form");
 form.addEventListener("submit", function(e){
     e.preventDefault();
+    const nameVal=e.target.name.value;
+    const commentVal=e.target.textarea.value;
+    // const currentTime=new Date();
+    const input=document.getElementById("name");
+    const textarea=document.getElementById("textarea");
     const formData= new FormData(form);
     axios
         .post("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a", formData)
         .then(response =>{
-            console.log(response);
+            response.data.unshift({
+                name: nameVal,
+                comment: commentVal,
+            });
+            displayComments(response);
         })
-        .error(error=>{
-
+        .catch(error=>{
+            if (commentVal==="" || nameVal===""){
+                input.style.border="1px solid #D22D2D";
+                textarea.style.border="1px solid #D22D2D";
+                e.target.reset();
+                console.log(Response.StatusCode=400);
+            }
         })
 });
 // form.addEventListener("submit", function (e){

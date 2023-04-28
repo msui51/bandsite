@@ -17,11 +17,11 @@
     axios
     .get("https://project-1-api.herokuapp.com/showdates?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
     .then(response=>{
-        showDates(response);
+        shows(response.data);
     })
 
-    function showDates(response){
-        for(let i=0; i<response.data.length; i++){
+    function shows(showsArray){
+        for(let i=0; i<showsArray.length; i++){
             
             const li= document.createElement("li");
             li.classList.add("main__item");
@@ -52,10 +52,10 @@
             date.innerText= "Date";
             place.innerText= "Venue";
             location.innerText= "Location";
-            showDate=new Date(response.data[i].date);
+            showDate=new Date(showsArray[i].date);
             dateContent.innerText= showDate.toDateString();
-            placeContent.innerText=response.data[i].place;
-            locationContent.innerText=response.data[i].location;
+            placeContent.innerText=showsArray[i].place;
+            locationContent.innerText=showsArray[i].location;
 
             li.appendChild(date);
             li.appendChild(dateContent);
