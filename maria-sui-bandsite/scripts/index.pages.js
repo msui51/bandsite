@@ -6,15 +6,15 @@ comments.appendChild(parentWrapper);
 axios
 .get("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
 .then(response=>{
-    displayComments(response);
+    displayComments(response.data);
 });
 
 
 
-function displayComments(response){    
+function displayComments(commentsArray){    
     parentWrapper.innerText='';
 
-    for (let i=0; i<response.data.length; i++){
+    for (let i=0; i<commentsArray.length; i++){
        
         const childWrapper=document.createElement("div");
         childWrapper.classList.add("comments__wrapper");
@@ -33,18 +33,18 @@ function displayComments(response){
         content.appendChild(nameDate);
 
         const headerName=document.createElement("h3");
-        headerName.innerText=response.data[i].name;
+        headerName.innerText=commentsArray[i].name;
         nameDate.appendChild(headerName);
 
         const date=document.createElement("p");
         date.classList.add("comments__date");
-        commentTime=new Date(response.data[i].timestamp);
+        commentTime=new Date(commentsArray[i].timestamp);
         date.innerText=commentTime.toLocaleDateString();
         nameDate.appendChild(date);
 
         const paragraph=document.createElement("p");
         paragraph.classList.add("comments__paragraph");
-        paragraph.innerText=response.data[i].comment;
+        paragraph.innerText=commentsArray[i].comment;
         content.appendChild(paragraph);
     
     };
