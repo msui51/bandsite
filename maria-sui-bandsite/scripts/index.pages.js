@@ -38,6 +38,20 @@ function displayComments(commentsArray){
         paragraph.classList.add("comments__paragraph");
         paragraph.innerText=commentsArray[i].comment;
         content.appendChild(paragraph);
+
+        const likeAndDeleteWrapper=document.createElement("div");
+        likeAndDeleteWrapper.classList.add("comments__buttons-wrapper");
+        content.appendChild(likeAndDeleteWrapper);
+
+        const likeButton=document.createElement("button");
+        likeButton.classList.add("comments__button-like-and-delete");
+        likeButton.innerText="LIKE";
+        likeAndDeleteWrapper.appendChild(likeButton);
+
+        const deleteButton=document.createElement("button");
+        deleteButton.classList.add("comments__button-like-and-delete");
+        deleteButton.innerText="DELETE";
+        likeAndDeleteWrapper.appendChild(deleteButton);
     
     };
 };

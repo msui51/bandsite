@@ -86,7 +86,7 @@
         }
     }
 
-    &__button{
+    &__button-comment{
         display: block;
         width:100%;
         @include mixins.cta;
@@ -95,6 +95,23 @@
             font-size: 1rem;
         }
     }
+    // &__buttons-wrapper{
+    //     display: flex;
+    //     flex-direction: column;
+    //     @include mixins.tablet{
+    //         align-items: end;
+    //     }
+    // }
+
+    // &__button-like-and-delete{
+    //     @include mixins.cta;
+    //     width:100%;
+    //     margin-top:1.5rem;
+    //     @include mixins.tablet{
+    //         width:30%;
+    //         font-size: 1rem;
+    //     }
+    // }
 
      //wraps individual comments
 
@@ -144,4 +161,27 @@
     &__paragraph{
         line-height: 1.5rem;
     }
+
+    //wraps like and delete buttons
+
+    &__buttons-wrapper{
+        display: flex;
+        flex-direction: column;
+        @include mixins.tablet{
+            align-items: end;
+        }
+    }
+
+    //like and delete button
+
+    &__button-like-and-delete{
+        @include mixins.cta;
+        width:100%;
+        margin-top:1.5rem;
+        @include mixins.tablet{
+            width:30%;
+            font-size: 1rem;
+        }
+    }
 }
+
