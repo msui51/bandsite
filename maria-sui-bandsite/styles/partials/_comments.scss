@@ -88,7 +88,7 @@
 
     &__button{
         display: block;
-       width:100%;
+        width:100%;
         @include mixins.cta;
         @include mixins.tablet{
             width:30%;

@@ -3,14 +3,6 @@ const parentWrapper=document.createElement("div");
 parentWrapper.classList.add("comments__wrapper-all");
 comments.appendChild(parentWrapper);
 
-axios
-.get("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
-.then(response=>{
-    displayComments(response.data);
-});
-
-
-
 function displayComments(commentsArray){    
     parentWrapper.innerText='';
 
@@ -48,36 +40,53 @@ function displayComments(commentsArray){
         content.appendChild(paragraph);
     
     };
-};  
+};
+
+function getData(){
+    axios
+    .get("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
+    .then(response=>{
+        displayComments(response.data.sort((a,b)=>
+            b.timestamp - a.timestamp));
+    });
+};
+getData();
+
 
 
 const form=document.querySelector("form");
 form.addEventListener("submit", function(e){
     e.preventDefault();
     const nameVal=e.target.name.value;
-    const commentVal=e.target.textarea.value;
-    // const currentTime=new Date();
+    const commentVal=e.target.comment.value;
     const input=document.getElementById("name");
-    const textarea=document.getElementById("textarea");
-    const formData= new FormData(form);
-    axios
-        .post("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a", formData)
-        .then(response =>{
-            response.data.unshift({
-                name: nameVal,
-                comment: commentVal,
-            });
-            displayComments(response);
+    const textarea=document.getElementById("comment");
+    if (commentVal=="" || nameVal==""){
+            input.style.border="1px solid #D22D2D";
+            textarea.style.border="1px solid #D22D2D";
+            e.target.reset();
+            alert("404 error code");
+            return;
+        };
+        axios
+        .post("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a",{
+           name: nameVal,
+           comment: commentVal
+        })
+        .then(response=>{
+            input.style.border="1px solid #e1e1e1";
+            textarea.style.border="1px solid #e1e1e1";
+            getData();
         })
         .catch(error=>{
-            if (commentVal==="" || nameVal===""){
-                input.style.border="1px solid #D22D2D";
-                textarea.style.border="1px solid #D22D2D";
-                e.target.reset();
-                console.log(Response.StatusCode=400);
-            }
+            console.log('error');
         })
+    
+    e.target.reset();
 });
+
+
+
 // form.addEventListener("submit", function (e){
 //     e.preventDefault();
 //     const nameVal=e.target.name.value;
