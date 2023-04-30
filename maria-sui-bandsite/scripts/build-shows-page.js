@@ -14,12 +14,14 @@
     ul.classList.add("main__list");
     main.appendChild(ul);
 
-
+function showsData(){
     axios
     .get("https://project-1-api.herokuapp.com/showdates?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
     .then(response=>{
         shows(response.data);
     })
+}
+showsData()
 
     function shows(showsArray){
         for(let i=0; i<showsArray.length; i++){
