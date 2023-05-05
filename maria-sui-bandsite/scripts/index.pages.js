@@ -3,6 +3,8 @@ const parentWrapper=document.createElement("div");
 parentWrapper.classList.add("comments__wrapper-all");
 comments.appendChild(parentWrapper);
 
+// function to retrieve comment data
+
 function getData(){
     axios
     .get("https://project-1-api.herokuapp.com/comments?api_key=c8a23e5a-96f4-4b41-bc3e-a5f97cb8f66a")
@@ -16,6 +18,10 @@ function getData(){
 getData();
 
 
+/* 
+function to loop through each comment to display
+and add ability to like and delete each comment
+*/
 
 function displayComments(comments){    
     parentWrapper.innerText='';
@@ -69,7 +75,7 @@ function displayComments(comments){
             deleteButton.innerText="DELETE";
             likeAndDeleteWrapper.appendChild(deleteButton);
 
-            console.log(comments[0].id);
+        //.put method to like a comment
 
             let idNum=comments[i].id;    
             const like=document.querySelectorAll(".like")
@@ -85,6 +91,8 @@ function displayComments(comments){
                 console.log(error);
             })
         });
+
+        //.delete method to delete a comment
 
             const deleteComment=document.querySelectorAll(".delete")
             deleteComment[i].addEventListener("click", function(e){  
@@ -106,7 +114,7 @@ function displayComments(comments){
     };
 };
 
-
+//event listener to add a new comment
 
 const form=document.querySelector("form");
 form.addEventListener("submit", function(e){
