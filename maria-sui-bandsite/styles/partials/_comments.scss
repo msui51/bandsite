@@ -49,6 +49,7 @@
 
     &__wrapper--right{
         padding:0 0 1rem 1rem;
+        flex-grow:1;
         @include mixins.tablet{
             width:100%;
         }
@@ -95,23 +96,6 @@
             font-size: 1rem;
         }
     }
-    // &__buttons-wrapper{
-    //     display: flex;
-    //     flex-direction: column;
-    //     @include mixins.tablet{
-    //         align-items: end;
-    //     }
-    // }
-
-    // &__button-like-and-delete{
-    //     @include mixins.cta;
-    //     width:100%;
-    //     margin-top:1.5rem;
-    //     @include mixins.tablet{
-    //         width:30%;
-    //         font-size: 1rem;
-    //     }
-    // }
 
      //wraps individual comments
 
