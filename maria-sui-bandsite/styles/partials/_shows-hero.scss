@@ -64,8 +64,10 @@
 
     &__song {
         border-radius: 3%;
+        
         @include mixins.tablet{
             width:60%;
+            height:190px;
         }
     }
 }
