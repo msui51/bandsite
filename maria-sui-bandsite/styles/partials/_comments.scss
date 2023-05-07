@@ -90,6 +90,9 @@
     &__button-comment{
         display: block;
         width:100%;
+        &:hover{
+            cursor: pointer;
+        }
         @include mixins.cta;
         @include mixins.tablet{
             width:30%;
@@ -162,6 +165,9 @@
         @include mixins.cta;
         width:100%;
         margin-top:1.5rem;
+        &:hover{
+            cursor: pointer;
+        }
         @include mixins.tablet{
             width:30%;
             font-size: 1rem;

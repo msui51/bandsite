@@ -114,7 +114,7 @@ function displayComments(comments){
     };
 };
 
-//event listener to add a new comment
+//event listener to add a new
 
 const form=document.querySelector("form");
 form.addEventListener("submit", function(e){

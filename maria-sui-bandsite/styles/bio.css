@@ -104,7 +104,7 @@
 }
 @media (min-width: 768px) {
   .hero {
-    height: 83vh;
+    height: 90vh;
   }
 }
 @media (min-width: 1280px) {
@@ -489,6 +489,9 @@
   font-weight: 700;
   padding: 0.5rem;
 }
+.comments__button-comment:hover {
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   .comments__button-comment {
     width: 30%;
@@ -554,6 +557,9 @@
   padding: 0.5rem;
   width: 100%;
   margin-top: 1.5rem;
+}
+.comments__button-like-and-delete:hover {
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .comments__button-like-and-delete {

@@ -25,12 +25,13 @@ function showsData(){
 }
 showsData()
 
+
 /*
 function to loop through each show
 and assign elements, classes, append, etc.
 */
 function shows(showsArray){
-    for(let i=0; i<showsArray.length; i++){
+   showsArray.forEach(show => {
             
     const li= document.createElement("li");
     li.classList.add("main__item");
@@ -61,10 +62,10 @@ function shows(showsArray){
     date.innerText= "Date";
     place.innerText= "Venue";
     location.innerText= "Location";
-    showDate=new Date(showsArray[i].date);
+    showDate=new Date(show.date);
     dateContent.innerText= showDate.toDateString();
-    placeContent.innerText=showsArray[i].place;
-    locationContent.innerText=showsArray[i].location;
+    placeContent.innerText=show.place;
+    locationContent.innerText=show.location;
 
     li.appendChild(date);
     li.appendChild(dateContent);
@@ -81,8 +82,9 @@ function shows(showsArray){
     li.appendChild(button);
         
     ul.appendChild(li);
-    };
-}
+    });
+    
+};
 
     // adding hover and select state for shows
 
@@ -93,10 +95,6 @@ function shows(showsArray){
             element.classList.add("main__item--active");
         });
     });
-
-
-       
-
 
 
 
