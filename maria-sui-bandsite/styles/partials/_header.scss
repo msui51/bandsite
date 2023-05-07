@@ -9,7 +9,7 @@
     @include mixins.tablet {
         display:flex;
         flex-direction: row;
-        padding:1.5rem 0 0;
+        padding:2.2rem 0 0rem;
     }
 
 
@@ -71,6 +71,7 @@
         padding-bottom: 1rem;
         @include mixins.tablet{
             width:auto;
+            padding-bottom: 2rem;
         }
     }
 

@@ -49,6 +49,7 @@
 
     &__wrapper--right{
         padding:0 0 1rem 1rem;
+        flex-grow:1;
         @include mixins.tablet{
             width:100%;
         }
@@ -86,9 +87,12 @@
         }
     }
 
-    &__button{
+    &__button-comment{
         display: block;
-       width:100%;
+        width:100%;
+        &:hover{
+            cursor: pointer;
+        }
         @include mixins.cta;
         @include mixins.tablet{
             width:30%;
@@ -144,4 +148,30 @@
     &__paragraph{
         line-height: 1.5rem;
     }
+
+    //wraps like and delete buttons
+
+    &__buttons-wrapper{
+        display: flex;
+        flex-direction: column;
+        @include mixins.tablet{
+            align-items: end;
+        }
+    }
+
+    //like and delete button
+
+    &__button-like-and-delete{
+        @include mixins.cta;
+        width:100%;
+        margin-top:1.5rem;
+        &:hover{
+            cursor: pointer;
+        }
+        @include mixins.tablet{
+            width:30%;
+            font-size: 1rem;
+        }
+    }
 }
+
